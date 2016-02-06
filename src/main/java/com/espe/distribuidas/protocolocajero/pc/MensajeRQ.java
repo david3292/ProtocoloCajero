@@ -3,21 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.espe.distribuidas.protocolocajero;
+package com.espe.distribuidas.protocolocajero.pc;
 
 /**
  *
  * @author david
  */
-public class MensajeRS {
+public class MensajeRQ {
 
-    private static final String TIPO_MENSAJE = "RS";
+    private static final String TIPO_MENSAJE = "RQ";
 
     private Cabecera cabecera;
     private Cuerpo cuerpo;
 
-    public MensajeRS(String originador, String idMensaje) {
-        this.cabecera = new Cabecera(MensajeRS.TIPO_MENSAJE, originador, idMensaje);
+    public MensajeRQ(String originador, String idMensaje) {
+        this.cabecera = new Cabecera(MensajeRQ.TIPO_MENSAJE, originador, idMensaje);
     }
 
     public Cabecera getCabecera() {

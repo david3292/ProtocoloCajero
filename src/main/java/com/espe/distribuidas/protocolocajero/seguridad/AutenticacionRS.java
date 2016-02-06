@@ -5,8 +5,8 @@
  */
 package com.espe.distribuidas.protocolocajero.seguridad;
 
-import com.espe.distribuidas.protocolocajero.Cuerpo;
-import com.espe.distribuidas.protocolocajero.Mensaje;
+import com.espe.distribuidas.protocolocajero.pc.Cuerpo;
+import com.espe.distribuidas.protocolocajero.pc.Mensaje;
 
 /**
  *

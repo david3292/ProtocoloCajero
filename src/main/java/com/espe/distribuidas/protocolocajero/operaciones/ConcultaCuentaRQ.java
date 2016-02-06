@@ -5,7 +5,7 @@
  */
 package com.espe.distribuidas.protocolocajero.operaciones;
 
-import com.espe.distribuidas.protocolocajero.Cuerpo;
+import com.espe.distribuidas.protocolocajero.pc.Cuerpo;
 
 /**
  *
