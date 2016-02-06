@@ -14,14 +14,14 @@ import org.apache.commons.lang3.StringUtils;
  *
  * @author david
  */
-public class DepositoRQ implements Cuerpo{
-    
+public class RetiroRQ implements Cuerpo{
+
     public static final String TIPO_AHORRO = "AHO";
     public static final String TIPO_CORRIENTE = "COR";
 
     private String cuenta;
     private String tipo;
-    private double valorDeposito;
+    private double valorRetiro;
     private String documetoDepositante;
     private Date fecha;
 
@@ -41,12 +41,12 @@ public class DepositoRQ implements Cuerpo{
         this.tipo = tipo;
     }
 
-    public double getValorDeposito() {
-        return valorDeposito;
+    public double getValorRetiro() {
+        return valorRetiro;
     }
 
-    public void setValorDeposito(double valor) {
-        this.valorDeposito = valor;
+    public void setValorRetiro(double valorRetiro) {
+        this.valorRetiro = valorRetiro;
     }
 
     public String getDocumetoDepositante() {
@@ -72,11 +72,10 @@ public class DepositoRQ implements Cuerpo{
         StringBuilder sb = new StringBuilder();
         sb.append(this.cuenta);
         sb.append("_").append(this.tipo).append("_");
-        sb.append(StringUtils.leftPad(Double.toString(this.valorDeposito), 10,"0"));
+        sb.append(StringUtils.leftPad(Double.toString(this.valorRetiro), 10,"0"));
         sb.append("_").append(this.documetoDepositante).append("_");
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy/HH/mm/ss");
         sb.append(sdf.format(this.fecha));
-        
         return sb.toString();
     }
     

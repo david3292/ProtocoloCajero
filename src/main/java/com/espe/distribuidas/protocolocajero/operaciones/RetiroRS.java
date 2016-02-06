@@ -12,13 +12,16 @@ import org.apache.commons.lang3.StringUtils;
  *
  * @author david
  */
-public class DepositoRS implements Cuerpo{
-    
+public class RetiroRS implements Cuerpo{
+
     public static final String DEPOSITO_EXITOSO = "00";
     public static final String CUENTA_NO_EXISTE = "01";
     public static final String DIFERENTE_TIPO_CUENTA = "02";
     public static final String CLIENTE_NO_EXISTE = "03";
     public static final String CUENTA_NO_ACTIVA = "04";
+    public static final String CUENTA_NO_PERTENECE_AL_CLIENTE = "05";
+    public static final String FONDOS_INSUFICIENTES = "06";
+    
     
     private String resultado;
     private double saldoActual;
@@ -39,7 +42,6 @@ public class DepositoRS implements Cuerpo{
         this.saldoActual = saldoActual;
     }        
     
-    
     @Override
     public String asTexto() {
         StringBuilder sb = new StringBuilder();
@@ -49,7 +51,6 @@ public class DepositoRS implements Cuerpo{
         }
         
         return sb.toString();
-        
     }
     
 }
