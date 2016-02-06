@@ -11,7 +11,7 @@ import com.espe.distribuidas.protocolocajero.pc.Cuerpo;
  *
  * @author david
  */
-public class ConcultaCuentaRQ implements Cuerpo{
+public class ConcultarCuentaRQ implements Cuerpo{
 
     public static final String TIPO_AHORRO = "_AHO";
     public static final String TIPO_CORRIENTE = "_COR";

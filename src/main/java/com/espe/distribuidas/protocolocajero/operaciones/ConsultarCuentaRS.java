@@ -11,11 +11,11 @@ import com.espe.distribuidas.protocolocajero.pc.Cuerpo;
  *
  * @author david
  */
-public class ConsultarCuentasRS implements Cuerpo{
+public class ConsultarCuentaRS implements Cuerpo {
 
     public static final String CORRECTO = "OK";
     public static final String INCORRECTO = "NO";
-    
+
     private String message;
     private String cedula;
     private String nombre;
@@ -61,14 +61,16 @@ public class ConsultarCuentasRS implements Cuerpo{
     public void setSaldoActual(double saldoActual) {
         this.saldoActual = saldoActual;
     }
-    
-    
+
     @Override
     public String asTexto() {
         StringBuilder sb = new StringBuilder();
-        sb.append(this.message).append(this.cedula).append(this.nombre)
-                .append(this.tipo).append(this.saldoActual);
+        sb.append(this.message).append("_");
+        sb.append(this.cedula).append("_");
+        sb.append(this.nombre).append("_");
+        sb.append(this.tipo).append("_");
+        sb.append(this.saldoActual);
         return sb.toString();
     }
-    
+
 }
